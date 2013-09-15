@@ -1,0 +1,9 @@
+ -- 用户表
+ create table commonuser(
+ id int(6) primary key auto_increment,
+ name varchar(10),
+ logname varchar(30) not null,
+ password varchar(100),
+ email varchar(100),
+ regdate datetime not null,
+ status smallint);

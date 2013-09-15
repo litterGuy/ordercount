@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE configuration PUBLIC   "-//mybatis.org//DTD Config 3.0//EN"   "http://mybatis.org/dtd/mybatis-3-config.dtd">  
+<configuration> 
+	<settings>
+		<!-- 对在此配置文件下的所有cache 进行全局性开/关设置。 -->
+		<setting name="cacheEnabled" value="true" />
+	</settings>
+	<!-- 暂时还未添加cache管理(添加ehcache缓存支持) -->
+	<!-- 
+    <typeAliases>  
+        <typeAlias alias="CommonUser" type="main.model.CommonUser" />
+    </typeAliases>  
+    <mappers>  
+        <mapper resource="main/model/mapper/CommonUser.xml" />
+    </mappers>  
+     -->
+</configuration> 

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="CommonUser">
+	<resultMap type="CommonUser" id="CommonUser">
+		<result property="id" column="id" javaType="int"  jdbcType="INTEGER" />
+		<result property="name" column="name"  javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result property="loginName" column="logname" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result property="password" column="password" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result property="email" column="email" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result property="regDate" column="regdate" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
+		<result property="status" column="status"  javaType="boolean"  jdbcType="SMALLINT" />
+	</resultMap>
+	<select id="userLogin"  parameterType="CommonUser" resultMap="CommonUser" >
+		SELECT id,logname,password,name 
+		FROM commonuser 
+		WHERE logname=#{loginName}
+	</select>
+</mapper>
